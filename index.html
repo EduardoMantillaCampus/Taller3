@@ -52,144 +52,143 @@
     </nav>-->
     <div class="container mt-5 pt-5">
         <!--Campus-->
-        <div class="caja">
-            <form id="formSedesCampus" class="col-sm-5 text-center">
-                <div class="mb-3">
-                    <label class="form-label">Nombre de la sedes</label>
-                    <input type="text" class="form-control" name="nombreSede" value="Bucaramanga">
+        <div class="cajas">
+            <h3>Campus</h3>
+            <div class="caja">
+                <form id="formSedesCampus" class="col-sm-5 text-center">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre de la sedes</label>
+                        <input type="text" class="form-control" name="nombreSede" value="Bucaramanga">
+                    </div>
+                    <input class="btn btn-success" type="submit" value="Guardar">
+                </form>
+                <div class="col-12 col-sm-5">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-center">Lista de sedes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodySedes" class="text-center">
+                        </tbody>
+                    </table>
                 </div>
-                <input class="btn btn-success" type="submit" value="Guardar">
-            </form>
-            <div class="col-12 col-sm-5">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th class="text-center text-center">Lista de sedes</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bodySedes" class="text-center">
-                    </tbody>
-                </table>
             </div>
         </div>
         <!--Sedes-->
-        <div class="caja">
-            <div class="col-5">
-                <form class="form" id="formTeams">
-                    <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">Sedes</label>
-                        <select name="sedeTeams" class="form-select"></select>
-                    </div>
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Escriba el nombre del teams"
-                            value="Apolo">
-                    </div>
-                    <div class="form-group">
-                        <label>Dia</label>
-                        <input type="date" name="dia" class="form-control" value="2022-06-02">
-                    </div>
-                    <div class="form-group">
-                        <label>Hora</label>
-                        <input type="time" name="hora" class="form-control" value="04:20">
-                    </div>
-                    <div class="form-group">
-                        <label>Salon</label>
-                        <input type="text" name="salon" class="form-control" value="A1">
-                    </div>
-                    <input class="btn btn-success" type="submit" value="Guardar">
-                </form>
-            </div>
-            <div class="col-5">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Sede</th>
-                            <th>Nombre</th>
-                            <th>Dia</th>
-                            <th>Hora</th>
-                            <th>Salon</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bodyTeams">
+        <div class="cajas">
+            <h3>Teams</h3>
+            <div class="caja">
+                <div class="col-5">
+                    <form class="form" id="formTeams">
+                        <div class="mb-3">
+                            <label for="disabledSelect" class="form-label">Sedes</label>
+                            <select name="sedeTeams" class="form-select"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre" class="form-control" placeholder="Escriba el nombre del teams"
+                                value="Apolo">
+                        </div>
+                        <div class="form-group">
+                            <label>Dia</label>
+                            <input type="date" name="dia" class="form-control" value="2022-06-02">
+                        </div>
+                        <div class="form-group">
+                            <label>Hora</label>
+                            <input type="time" name="hora" class="form-control" value="04:20">
+                        </div>
+                        <div class="form-group">
+                            <label>Salon</label>
+                            <input type="text" name="salon" class="form-control" value="A1">
+                        </div>
+                        <div class="form-group">
+                            <label>Numero Salon</label>
+                            <input type="number" name="numSalon" class="form-control" value="7">
+                        </div>
+                        <div class="form-group">
+                            <label>Piso de Salon</label>
+                            <input type="number" name="pisoSalon" class="form-control" value="6">
+                        </div>
+                        <input class="btn btn-success" type="submit" value="Guardar">
+                    </form>
+                </div>
+                <div class="col-5">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Sede</th>
+                                <th>Nombre</th>
+                                <th>Dia</th>
+                                <th>Hora</th>
+                                <th>Salon</th>
+                                <th>Salon</th>
+                                <th>Piso</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTeams">
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="caja">
-            <div class="col-5">
-                <form class="form" id="formCampers">
-                    <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">Seleccione una sede</label>
-                        <select name="sede" id="teamsSeleccionado" class="form-select"></select>
-                    </div>
-                    <div class="form-group">
-                        <label>Ingrese el nombre del camper</label>
-                        <input type="text" name="nombre" class="form-control" placeholder="Escriba el nombre del teams"
-                            value="Apolo">
-                        <input type="text" name="nombre" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Dia</label>
-                        <input type="date" name="dia" class="form-control" value="2022-06-02">
-                    </div>
-                    <div class="form-group">
-                        <label>Hora</label>
-                        <input type="time" name="hora" class="form-control" value="04:20">
-                    </div>
-                    <div class="form-group">
-                        <label>Salon</label>
-                        <input type="text" name="salon" class="form-control" value="A1">
-                    </div>
-                    <input class="btn btn-success" type="submit" value="Guardar">
-                </form>
-            </div>
-            <div class="col-5">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Sede</th>
-                            <th>Nombre</th>
-                            <th>Dia</th>
-                            <th>Hora</th>
-                            <th>Salon</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bodyTeams">
-
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+        <div class="cajas">
+            <h3>Campers</h3>
+            <div class="caja">
+                <div class="col-5">
+                    <form class="form" id="formCampers">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" name="" class="form-control"
+                                value="Edgar Eduardo">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input type="text" name="" class="form-control"
+                                value="Edgar Eduardo">
+                        </div>
+                        <div class="">
+                            <label for="">Seleccione una sede</label>
+                            <select name="" class="form-select"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="" class="form-control"
+                                value="Edgar Eduardo">
+                        </div>
+                        <div class="form-group">
+                            <label>Horario Ingles</label>
+                            <input type="time" name="" class="form-control"
+                                value="09:00">
+                        </div>
+                        <div class="form-group">
+                            <label>Horario Ser</label>
+                            <input type="time" name="" class="form-control"
+                                value="10:00">
+                        </div>
+                        <input class="btn btn-success" type="submit" value="Guardar">
+                    </form>
+                </div>
+                <div class="col-5">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Sede</th>
+                                <th>Nombre</th>
+                                <th>Dia</th>
+                                <th>Hora</th>
+                                <th>Salon</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTeams">
 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-
-        <input type="tel" name="telefono" placeholder="Ingrese el telefono del camper">
-        <select name="teams">
-
-        </select>
-        <input type="text" name="email" placeholder="Ingrese su email">
-        <input type="time" name="horarioS" placeholder="Ingrese el horario del ser">
-        <input type="time" name="horarioI" placeholder="Ingrese el horario de ingles">
-        <input type="submit" value="Guardar">
-
-        <fieldset>
-            <legend>Datos de los Trainers:</legend>
-            <form id="formTrainer">
-                <select name="sede" id="teamsSeleccionado"></select><br>
-                <input type="text" name="nombre" placeholder="Ingrese el nombre del camper"><br>
-                <input type="tel" name="telefono" placeholder="Ingrese el telefono del camper"><br>
-                <select name="teams">
-
-                </select><br>
-                <input type="text" name="email" placeholder="Ingrese su email"><br>
-                <input type="time" name="horarioS" placeholder="Ingrese el horario del ser"><br>
-                <input type="time" name="horarioI" placeholder="Ingrese el horario de ingles"><br>
-                <input type="submit" value="Guardar">
-
-            </form>
-        </fieldset>
     </div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
