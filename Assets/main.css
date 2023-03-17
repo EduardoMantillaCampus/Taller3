@@ -1,0 +1,17 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.caja{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 5px #00000027;
+    padding: 60px 30px;
+    margin: 30px 0;
+}
