@@ -12,44 +12,9 @@
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Assets/DataTables/jquery.dataTables.min.css">
     <script src="Assets/DataTables/jquery.dataTables.min.js"></script>
-
-
 </head>
 
 <body>
-    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">Taller 3</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sedes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Trainers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Campers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Niveles</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Tecnologias</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Teams</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">roadMap</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>-->
     <div class="container mt-5 pt-5">
         <!--Campus-->
         <div class="cajas">
@@ -81,7 +46,7 @@
             <div class="caja">
                 <div class="col-5">
                     <form class="form" id="formTeams">
-                        <div class="mb-3">
+                        <div>
                             <label for="disabledSelect" class="form-label">Sedes</label>
                             <select name="sedeTeams" class="form-select"></select>
                         </div>
@@ -106,7 +71,7 @@
                             <label>Numero Salon</label>
                             <input type="number" name="numSalon" class="form-control" value="7">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label>Piso de Salon</label>
                             <input type="number" name="pisoSalon" class="form-control" value="6">
                         </div>
@@ -117,17 +82,15 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr class="text-center">
-                                <th>Sede</th>
                                 <th>Nombre</th>
                                 <th>Dia</th>
                                 <th>Hora</th>
                                 <th>Salon</th>
-                                <th>Salon</th>
+                                <th>Num Salon</th>
                                 <th>Piso</th>
                             </tr>
                         </thead>
                         <tbody id="bodyTeams">
-
                         </tbody>
                     </table>
                 </div>
@@ -140,32 +103,157 @@
                     <form class="form" id="formCampers">
                         <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" name="" class="form-control"
+                            <input type="text" name="nombre" class="form-control"
                                 value="Edgar Eduardo">
                         </div>
                         <div class="form-group">
                             <label>Telefono</label>
-                            <input type="text" name="" class="form-control"
-                                value="Edgar Eduardo">
+                            <input type="text" name="telefono" class="form-control"
+                                value="1234567890">
                         </div>
-                        <div class="">
-                            <label for="">Seleccione una sede</label>
-                            <select name="" class="form-select"></select>
+                        <div class="form-group">
+                            <label>Ubicacion</label>
+                            <input type="text" name="ubicacion" class="form-control"
+                                value="Lebrija Santander">
+                        </div>
+                        <div>
+                            <label>Seleccione una Sede</label>
+                            <select name="sedeCamper" class="form-select">
+                            </select>
+                        </div>
+                        <div>
+                            <label>Seleccione un Teams</label>
+                            <select name="teamsCamper" class="form-select">
+                            </select>
+                        </div>
+                        <div>
+                            <label>Medio de transporte</label>
+                            <select name="transporteCamper" class="form-select"></select>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="" class="form-control"
-                                value="Edgar Eduardo">
+                            <input type="email" name="email" class="form-control"
+                                value="eduardo@email.com">
                         </div>
                         <div class="form-group">
                             <label>Horario Ingles</label>
-                            <input type="time" name="" class="form-control"
+                            <input type="time" name="horarioIngles" class="form-control"
                                 value="09:00">
                         </div>
                         <div class="form-group">
                             <label>Horario Ser</label>
-                            <input type="time" name="" class="form-control"
+                            <input type="time" name="horarioSer" class="form-control"
                                 value="10:00">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Nivel Actual</label>
+                            <select name="nivelActual" class="form-select"></select>
+                        </div>
+                        <input class="btn btn-success" type="submit" value="Guardar">
+                    </form>
+                </div>
+                <div class="col-12 mt-5">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Sede</th>
+                                <th>Teams</th>
+                                <th>Nombre</th>
+                                <th>Telefono</th>
+                                <th>Ubicacion</th>
+                                <th>Medio Transporte</th>
+                                <th>Email</th>
+                                <th>Horario Ingles</th>
+                                <th>Horario Ser</th>
+                                <th>Nivel Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyCampers">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="cajas">
+            <h3>Trainers</h3>
+            <div class="caja">
+                <div class="col-5">
+                    <form class="form" id="formTrainer">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" name="nombre" class="form-control"
+                                value="Andres Florez">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input type="text" name="telefono" class="form-control"
+                                value="1234567890">
+                        </div>
+                        <div>
+                            <label>Seleccione una Sede</label>
+                            <select name="sedeTrainer" class="form-select">
+                            </select>
+                        </div>
+                        <div>
+                            <label>Seleccione un Teams</label>
+                            <select name="teamsTrainer" class="form-select">
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control"
+                                value="andres@email.com">
+                        </div>
+                        <input class="btn btn-success" type="submit" value="Guardar">
+                    </form>
+                </div>
+                <div class="col-5">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Sede</th>
+                                <th>Teams</th>
+                                <th>Nombre</th>
+                                <th>Telefono</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTrainers">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="cajas">
+            <h3>Roadma</h3>
+            <div class="caja">
+                <div class="col-5">
+                    <form class="form" id="formRoadMap">
+                        <div>
+                            <label for="disabledSelect" class="form-label">Sedes</label>
+                            <select name="sedeRoadMap" class="form-select"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" name="nombreRoadMap" class="form-control"
+                                value="Hola-Mundo">
+                        </div>
+                        <div class="form-group">
+                            <label>Numero Creditos</label>
+                            <input type="text" name="numCreditosRoadMap" class="form-control"
+                                value="4">
+                        </div>
+                        <div class="form-group">
+                            <label>Año</label>
+                            <input type="text" name="anioRoadMap" class="form-control"
+                                value="2022">
+                        </div>
+                        <div class="mb-3">
+                            <label>Asignatura</label>
+                            <input type="text" name="asignaturaRoadMap" class="form-control"
+                                value="2">
                         </div>
                         <input class="btn btn-success" type="submit" value="Guardar">
                     </form>
@@ -176,19 +264,19 @@
                             <tr class="text-center">
                                 <th>Sede</th>
                                 <th>Nombre</th>
-                                <th>Dia</th>
-                                <th>Hora</th>
-                                <th>Salon</th>
+                                <th>Num Creditos</th>
+                                <th>Año</th>
+                                <th>Asignatura</th>
+                                
                             </tr>
                         </thead>
-                        <tbody id="bodyTeams">
+                        <tbody id="bodyRoadMap">
 
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
     </div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
